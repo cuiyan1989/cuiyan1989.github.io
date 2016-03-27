@@ -1,7 +1,69 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+body {background : black;
+	  color : white;
+	  font-size : 50px;}
+div {margin : 0,auto;}
+</style>
+
+<script>
+function toDou(n) {
+	if(n<10){
+		return '0'+n;}
+	else
+		return ''+n;
+}
+window.onload = function(){
+	
+	function tick(){
+		var date = new Date();
+		var aImg = document.getElementsByClassName('nub');
+		var str = toDou(date.getFullYear())+toDou(date.getMonth()+1)+toDou(date.getDate())+toDou(date.getHours())+toDou(date.getMinutes())+toDou(date.getSeconds());
+		for(var i=0;i<aImg.length-1;i++){
+		aImg[i].src = 'img/'+str.charAt(i)+'.png'
+		}
+		
+		var xq = new Array();
+		xq = ['seven','one','two','three','four','five','six']
+		tDay = date.getDay();
+		
+		aImg[14].src = 'img/'+xq[tDay]+'.png'
+		
+	}
+	setInterval(tick,1000);
+	tick();
+	}
+	
+	
+</script>
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div>
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img src = "img/year.png">
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img src = "img/month.png">
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img src = "img/seven.png">
+<br>
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img src = "img/sign.png">
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img src = "img/sign.png">
+<img class = 'nub' src = 'img/0.png'>
+<img class = 'nub' src = 'img/0.png'>
+<img src = "img/week.png">
+<img class = 'nub' src = 'img/one.png'>
+</div>
 </body>
 </html>
